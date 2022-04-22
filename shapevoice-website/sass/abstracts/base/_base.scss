@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-mnt;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: $font-mnt;
+    color: $text-7d;
+    font-size: $font-20;
+}
+
+.site-title {
+    color: $text-black;
+    font-family: $font-mnt;
+    font-size: $font-42;
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 48px;
+}
+
+.common-para-text {
+    color: $text-7d;
+    font-family: $font-mnt;
+    font-size: $font-20;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 30px;
+    p {
+        color: $text-7d;
+        font-family: $font-mnt;
+        font-size: $font-20;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 30px;
+    }
+    &.font-16 {
+        font-size: $font-16;
+        p {
+            font-size: $font-16;
+        }
+    }
+}
+
+.site-button {
+    color: $text-e6!important;
+    font-family: $font-mnt;
+    font-size: $font-16;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+    padding: 18px 38px;
+    border-radius: 10px;
+    background-color: $bg-blue;
+    text-decoration: none;
+    border: 1px solid $bg-blue;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-transform: capitalize;
+    &:hover {
+        background: transparent;
+        color: #4F46BA!important;
+    }
+    &.radius {
+        border-radius: 28px;
+    }
+}
+
+.site-small-heading {
+    font-size: $font-14;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 17px;
+    color: $text-a9;
+}
+
+.sub-heading {
+    font-size: $font-50 !important;
+    line-height: 60px !important;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: $text-black;
+    margin-top: 15px;
+    margin-bottom: 29px;
+}
+
+.sub-para {
+    font-size: $font-18;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+@include forsize(leptop) {
+    .container {
+        width: 100%;
+        max-width: 1140px;
+    }
+}
+
+@include forsize(tablet-pro) {
+    .container {
+        width: 100%;
+        max-width: 960px;
+    }
+    .site-button {
+        padding: 15px 35px;
+        font-size: $font-15;
+    }
+    .site-title {
+        font-size: $font-36;
+    }
+    .common-para-text {
+        font-size: $font-18;
+        line-height: 27px;
+        p {
+            font-size: $font-18;
+        }
+        &.font-16 {
+            font-size: $font-15;
+            p {
+                font-size: $font-15;
+            }
+        }
+    }
+    .sub-para {
+        font-size: $font-16;
+    }
+    .sub-heading {
+        font-size: $font-44!important;
+        line-height: 55px!important;
+        margin-bottom: 25px;
+    }
+}
+
+@include forsize(tablet) {
+    .container {
+        width: 100%;
+        max-width: 720px;
+    }
+    .site-button {
+        padding: 12px 30px;
+        font-size: $font-14;
+    }
+    .site-title {
+        font-size: $font-33;
+    }
+    .common-para-text {
+        font-size: $font-17;
+        line-height: 27px;
+        p {
+            font-size: $font-17;
+        }
+        &.font-16 {
+            font-size: $font-15;
+            p {
+                font-size: $font-15;
+            }
+        }
+    }
+    .sub-para {
+        font-size: $font-15;
+        line-height: 27px;
+    }
+    .sub-heading {
+        font-size: $font-40!important;
+        line-height: 55px!important;
+        margin-bottom: 22px;
+    }
+    .site-small-heading {
+        font-size: $font-13;
+    }
+}
+
+@include forsize(phone-rotate) {
+    .container {
+        width: 100%;
+        max-width: 540px;
+    }
+    .site-button {
+        padding: 12px 30px;
+        font-size: $font-14;
+    }
+    .site-title {
+        font-size: $font-30;
+    }
+    .common-para-text {
+        font-size: $font-16;
+        line-height: 27px;
+        p {
+            font-size: $font-17;
+        }
+        &.font-16 {
+            font-size: $font-15;
+            p {
+                font-size: $font-15;
+            }
+        }
+    }
+    .sub-para {
+        font-size: $font-15;
+        line-height: 27px;
+    }
+    .sub-heading {
+        font-size: $font-35!important;
+        line-height: 45px!important;
+        margin-bottom: 18px;
+    }
+    .site-small-heading {
+        font-size: $font-13;
+    }
+}
+
+@include forsize(iphone) {
+    // .site-title {
+    //     font-size: $font-25;
+    // }
+}

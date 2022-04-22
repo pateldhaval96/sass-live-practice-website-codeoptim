@@ -1,0 +1,42 @@
+@mixin forsize($size) {
+    @if $size==iphone {
+        @media (max-width: 390px) {
+            @content;
+        }
+    }
+    @else if $size==aphone {
+        @media (max-width: 510px) {
+            @content;
+        }
+    }
+    @else if $size==phone {
+        @media (max-width: 655px) {
+            @content;
+        }
+    }
+    @else if $size==phone-rotate {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $size==tablet {
+        @media (max-width: 991px) {
+            @content;
+        }
+    }
+    @else if $size==tablet-pro {
+        @media (max-width: 1199px) {
+            @content;
+        }
+    }
+    @else if $size==leptop {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    }
+    // @else if $size == desktop {
+    //   @media (min-width: 1200px) { @content; }
+    // } @else if $size == big-desktop-up {
+    //   @media (min-width: 1800px) { @content; }
+    // }
+}

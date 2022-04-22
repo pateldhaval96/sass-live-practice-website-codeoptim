@@ -1,0 +1,195 @@
+.header_main {
+    padding-top: 28px;
+    &__sub {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-logo {
+            a {
+                color: $text-black;
+                text-decoration: none;
+                font-size: $font-20;
+                font-weight: 700;
+                line-height: 25px;
+                text-transform: uppercase;
+                &:hover {
+                    color: #4F46BA;
+                }
+            }
+        }
+        &-menu {
+            ul {
+                list-style: none;
+                li {
+                    display: inline-block;
+                    margin-left: 25px;
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                    a {
+                        text-decoration: none;
+                        font-weight: 700;
+                        font-size: $font-14;
+                        line-height: 19px;
+                        text-transform: capitalize;
+                        color: $text-black;
+                        i {
+                            margin-left: 12px;
+                        }
+                        &:hover {
+                            color: #4F46BA;
+                        }
+                    }
+                }
+            }
+        }
+        &-form {
+            ul {
+                list-style: none;
+                li {
+                    display: inline-block;
+                    margin-left: 38px;
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                    a {
+                        text-decoration: none;
+                        font-weight: 700;
+                        font-size: $font-14;
+                        line-height: 19px;
+                        text-transform: capitalize;
+                        color: $text-black;
+                        &:hover {
+                            color: #4F46BA;
+                        }
+                    }
+                    .site-button {
+                        padding: 15px 34px;
+                    }
+                }
+            }
+        }
+    }
+    .toogler-icon {
+        display: none;
+    }
+}
+
+@include forsize(tablet-pro) {
+    .header_main {
+        padding-top: 25px;
+        &__sub {
+            &-logo {
+                a {
+                    font-size: $font-17;
+                }
+            }
+            &-menu {
+                ul {
+                    li {
+                        margin-left: 22px;
+                        a {
+                            font-size: $font-13;
+                            i {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            &-form {
+                ul {
+                    li {
+                        margin-left: 38px;
+                        a {
+                            font-size: $font-13;
+                        }
+                        .site-button {
+                            padding: 13px 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include forsize(tablet) {
+    .header_main {
+        padding-top: 25px;
+        &__sub {
+            display: unset;
+            &-logo {
+                a {
+                    font-size: $font-17;
+                }
+            }
+            ul {
+                display: none;
+                background-color: #4F46BA;
+                li {
+                    display: block;
+                    margin-left: 20px!important;
+                    // margin-bottom: 10px;
+                    a {
+                        line-height: 35px;
+                        color: $text-white;
+                        &:hover {
+                            color: $text-black;
+                        }
+                    }
+                    .site-button {
+                        background-color: #FF7F5C;
+                        color: $text-white!important;
+                        line-height: unset;
+                        margin-top: 7px;
+                    }
+                }
+            }
+            &-menu {
+                ul {
+                    padding-top: 15px;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    margin-top: 15px;
+                    li {
+                        margin-left: 22px;
+                        a {
+                            font-size: $font-13;
+                            i {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            &-form {
+                ul {
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    padding-bottom: 15px;
+                    li {
+                        margin-left: 38px;
+                        a {
+                            font-size: $font-13;
+                        }
+                        .site-button {
+                            padding: 13px 28px;
+                        }
+                    }
+                }
+            }
+            // .active-menu {
+            //     display: block;
+            // }
+        }
+        .toogler-icon {
+            display: block;
+            i {
+                position: absolute;
+                right: 8px;
+                top: 0;
+            }
+        }
+    }
+}
